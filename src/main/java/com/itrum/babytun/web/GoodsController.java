@@ -21,7 +21,6 @@ public class GoodsController {
         log.info("goodsId:"+goodsId);
         model.addAttribute("goods",goodsService.getGoods(goodsId));
         model.addAttribute("covers",goodsService.getCovers(goodsId));
-
         model.addAttribute("params",goodsService.getParams(goodsId));
         model.addAttribute("details",goodsService.getDetails(goodsId));
         return "goods";
