@@ -1,0 +1,30 @@
+server:
+  port: 80
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/babytun?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+  freemarker:
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+  redis:
+    host: 192.168.56.101
+    database: 3
+    port: 6379
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 100
+        min-idle: 8
+        max-wait: 1000ms
+mybatis:
+  configuration:
+    #�����շ�����ת��
+    map-underscore-to-camel-case: true
+  #xml��·��
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.itrum.babytun.entity
+
+
